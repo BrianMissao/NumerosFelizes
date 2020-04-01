@@ -12,20 +12,20 @@ public class Principal {
 
     private static String examinarNumero(int numero) {
         while (numero > 1 && numero != 89) {
-            numero = organizarNumero(numero);
+            numero = somarOsQuadradosDoNumero(numero);
         }
-        return numero == 89? "Número triste.": "Número feliz!";
+        return numero == 89 ? "Número triste." : "Número feliz!";
     }
 
-    private static int organizarNumero(int numero) {
-        int numeroTemp;
-        numeroTemp = numero;
+    private static int somarOsQuadradosDoNumero(int numero) {
+        int numeroADecompor;
+        numeroADecompor = numero;
         numero = 0;
-        int digitoTemp;
-        while (numeroTemp > 0) {
-            digitoTemp = (numeroTemp % 10) * (numeroTemp % 10);
-            numero += digitoTemp;
-            numeroTemp = numeroTemp / 10;
+        int algarismoCalculadoDoNumeroADecompor;
+        while (numeroADecompor > 0) {
+            algarismoCalculadoDoNumeroADecompor = (numeroADecompor % 10) * (numeroADecompor % 10);
+            numero += algarismoCalculadoDoNumeroADecompor;
+            numeroADecompor = numeroADecompor / 10;
         }
         return numero;
     }
